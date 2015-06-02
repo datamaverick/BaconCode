@@ -15,38 +15,33 @@ alphabets = {
 	'19': 't', '20': 'u', '21': 'v', '22': 'w', '23': 'x', '24': 'y', '25': 'z'
 }
 
-#input the message to decode
-user_input = raw_input("Enter the code here: ")
-test_list = list(user_input)
-temp_list = [s for s in test_list if s != " "]  #list of characters from input bar spaces
-if len(temp_list) % 5 != 0:
-	print("The total characters must be multiples of 5 for Bacon codes")
-	user_input = raw_input("Enter the code here: ")
+def remove_space(msg):
+#remove the spaces from the input messages and return characters in a list
+	test_list = list(msg)
+	results = [s for s in test_list if s != " "]
+	return results
 
-#Assign values of 1 or 0 based on uppercase or lowercase letters and store in temp_list
-for n,letter in enumerate(temp_list):
-	if letter.isupper():
-		temp_list[n] = '1'
-	else:
-		temp_list[n] = '0'
+def assign_number(ls):
+#Assign values of 1 or 0 based on uppercase or lowercase letters
+	for n,letter in enumerate(ls):
+		if letter.isupper():
+			ls[n] = '1'
+		else:
+			ls[n] = '0'
+	return ls
 
-#num_list stores binary representation, in groups of 5 numbers each.
-num_list = []
-k = 0
-while k < (len(temp_list)):
+def binary_rep(old_list):
+#new_list stores binary representation, in groups of 5 numbers each.
+	new_list = []
+	k = 0
+	while k < (len(old_list)):
 
-	newitem = ''.join(temp_list[k:k+5])
-	num_list.append(newitem)
-	k +=5
-#print(num_list)
+		newitem = ''.join(old_list[k:k+5])
+		new_list.append(newitem)
+		k +=5
+	return new_list
 
-inter_list = [numbers[x] for x in num_list]
-#print(inter_list)
 
-decode_list = [alphabets[x] for x in inter_list]
-
-print "The hidden message is:"
-print(decode_list)
 
 
 
