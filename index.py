@@ -17,13 +17,13 @@ alphabets = {
 
 #input the message to decode
 user_input = raw_input("Enter the code here: ")
-if len(user_input) % 5 != 0:
+test_list = list(user_input)
+temp_list = [s for s in test_list if s != " "]  #list of characters from input bar spaces
+if len(temp_list) % 5 != 0:
 	print("The total characters must be multiples of 5 for Bacon codes")
 	user_input = raw_input("Enter the code here: ")
 
 #Assign values of 1 or 0 based on uppercase or lowercase letters and store in temp_list
-temp_list = list(user_input)
-
 for n,letter in enumerate(temp_list):
 	if letter.isupper():
 		temp_list[n] = '1'
