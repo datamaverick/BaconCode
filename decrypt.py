@@ -17,7 +17,7 @@ try:
 	""" To handle mistyping of upper/lowercase letters, which won't find a key
 	in the dictionary
 	"""
-	#look up in corresponding dictionaries and store results in the lists
+	#look up in dictionaries and store results in the corresponding lists
 	inter_list = [index.numbers[x] for x in num_list]
 
 	decode_list = [index.alphabets[x] for x in inter_list]
