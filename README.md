@@ -15,6 +15,7 @@ Baconian method assigns 0 and 1 to letters from the original messages (based on 
   * Examples:
     - Input message: The COw mOOs tHe chicKeN
     - Output message: TGIF
+
 2. Encrypting: The file encrypt.py accepts an input message, evaluates by Baconian method, and returns a *suggestion* of numbers of letters for the encrypted message. You can then enter a 'dummy' message of that length, the file will change the letter cases accordingly.
   * Some requirements/notations for inputs:
     - For the hidden message (first input): only alphabetical characters are accepted
