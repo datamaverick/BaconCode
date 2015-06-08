@@ -9,9 +9,18 @@ Baconian method assigns 0 and 1 to letters from the original messages (based on 
 1. Decrypting: The file decrypt.py accepts an input message, evaluates by Baconian method, and returns a the hidden message. 
   * Some requirements/notations:
     - Any non-alphabetical characters will be recognized as 0
-    - Spaces are allowed
+    - Spaces are always allowed
     - Input of correct upper/lowercase letters are extremely important
+    - Output will be a list, with each item as a decrypted letter
   * Examples:
     - Input message: The COw mOOs tHe chicKeN
     - Output message: TGIF
-2. Encrypting: The file encrypt.py accepts an input message, evaluates by Baconian method, and returns a **suggestion** of upper/lowercase for letters 
+2. Encrypting: The file encrypt.py accepts an input message, evaluates by Baconian method, and returns a *suggestion* of numbers of letters for the encrypted message. You can then enter a 'dummy' message of that length, the file will change the letter cases accordingly.
+  * Some requirements/notations for inputs:
+    - For the hidden message (first input): only alphabetical characters are accepted
+    - Spaces are always allowed
+    - For the 'dummy' message (second input): do **not** use special characters, e.g. ', ", $, @, etc.
+    - Output will be a string with no spaces..
+  * Examples:
+    - Input message: I love you
+    - Output message: iT's timE wE PlAY ThIs GaMe i LikE To calL GUeSsIng
