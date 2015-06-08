@@ -7,13 +7,19 @@ numbers = {
 	'11000': '24', '11001': '25'
 }
 
-#Dictionary 2 for index of letters in the alphabets
+#Dictionary 2 for reverse lookup of dictionary 1
+inv_numbers = {v: k for k, v in numbers.items()}
+
+#Dictionary 3 for index of letters in the alphabets
 alphabets = {
 	'0': 'a', '1': 'b', '2': 'c', '3': 'd', '4': 'e', '5': 'f', '6': 'g',
 	'7': 'h', '8': 'i', '9': 'j', '10': 'k', '11': 'l', '12': 'm',
 	'13': 'n', '14': 'o', '15': 'p', '16': 'q', '17': 'r', '18': 's',
 	'19': 't', '20': 'u', '21': 'v', '22': 'w', '23': 'x', '24': 'y', '25': 'z'
 }
+
+#Dictionary 4 for reverse lookup of dictionary 1
+inv_alphabets = {v: k for k, v in alphabets.items()}
 
 def remove_space(msg):
 #remove the spaces from the input messages and return characters in a list
@@ -41,10 +47,24 @@ def binary_rep(old_list):
 		k +=5
 	return new_list
 
+def assign_letter(binary_list):
+#convert the binary values of 0 and 1 to letters a and A and store in a list
+	sep = ''
+	temp_msg1 = sep.join(binary_list)
+	temp_msg2 = temp_msg1.replace('0','a')
+	temp_msg = temp_msg2.replace('1','A')
 
+	format_list = list(temp_msg)
+	return format_list
 
+def position_list(format_list):
+	position = []
+	i = 0
+	while i < (len(format_list)):
+		if format_list[i].isupper() == True:
+			position.append(i)
+		i += 1
 
-
-
+	return position
 
 
