@@ -7,7 +7,7 @@ numbers = {
 	'11000': '24', '11001': '25'
 }
 
-#Dictionary 2 for reverse lookup of dictionary 1
+#Dictionary 2 for reverse lookup of dictionary 1 - regular numbers to binary
 inv_numbers = {v: k for k, v in numbers.items()}
 
 #Dictionary 3 for index of letters in the alphabets
@@ -18,7 +18,7 @@ alphabets = {
 	'19': 't', '20': 'u', '21': 'v', '22': 'w', '23': 'x', '24': 'y', '25': 'z'
 }
 
-#Dictionary 4 for reverse lookup of dictionary 1
+#Dictionary 4 for reverse lookup of dictionary 3 - letters to regular numbers
 inv_alphabets = {v: k for k, v in alphabets.items()}
 
 def remove_space(msg):
