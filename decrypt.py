@@ -21,9 +21,9 @@ try:
 	inter_list = [index.numbers[x] for x in num_list]
 
 	decode_list = [index.alphabets[x] for x in inter_list]
+	decode_str = "".join(c for c in decode_list)
 
-	print "The hidden message is:"
-	print(decode_list)
+	print "The hidden message is: %s" %(decode_str)
 
 except KeyError:
 	print("You mistyped an upper or lower case letter")
