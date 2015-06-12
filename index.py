@@ -58,6 +58,7 @@ def assign_letter(binary_list):
 	return format_list
 
 def position_list(format_list):
+	
 	position = []
 	i = 0
 	while i < (len(format_list)):
