@@ -25,7 +25,7 @@ msg_input = raw_input("So what message are you thinking?\n > ")
 #evaluate the length of the message.
 temp_list = index.remove_space(msg_input)
 while len(temp_list) != letter_count:
-	print("The total characters must be %d" %(letter_count))
+	print("Your message is %d letters long, it should be %d" %(len(temp_list),letter_count))
 	msg_input = raw_input("Please re-enter a valid message\n > ")
 	temp_list = index.remove_space(msg_input)
 
